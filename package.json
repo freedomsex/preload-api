@@ -1,6 +1,8 @@
 {
   "name": "@freedomsex/preload-api",
   "version": "1.0.2",
+  "author": "tebaly",
+  "license": "MIT",
   "description": "Preload utilite for ApiResource",
   "main": "index.js",
   "scripts": {
@@ -10,8 +12,6 @@
     "type": "git",
     "url": "git+ssh://git@github.com/freedomsex/preload-api.git"
   },
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/freedomsex/preload-api/issues"
   },
