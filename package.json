@@ -1,6 +1,6 @@
 {
   "name": "@freedomsex/preload-api",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "tebaly",
   "license": "MIT",
   "description": "Preload utilite for ApiResource",

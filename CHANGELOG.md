@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.3](https://github.com/freedomsex/preload-api/compare/1.0.2...1.0.3) (2022-01-30)
+
+
+### Bug Fixes
+
+* license ([a2bb690](https://github.com/freedomsex/preload-api/commit/a2bb690f9b80ae3d8b3349bfac42b6c68a61a938))
+
 ### [1.0.2](https://github.com/freedomsex/preload-api/compare/1.0.1...1.0.2) (2022-01-30)
 
 
