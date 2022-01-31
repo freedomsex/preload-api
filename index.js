@@ -159,7 +159,7 @@ export default class PreloadApi {
   // Раскрытие списка или объекта
   async fill(list, rules, defaultRegexp, isPublic) {
     if (isArray(list)) {
-      return await fillList(list, rules, defaultRegexp); 
+      return await this.fillList(list, rules, defaultRegexp); 
     }
     if (isObject(list)) {
       return await this.fillItem(list, rules, defaultRegexp, isPublic || this.isPublic);
