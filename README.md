@@ -2,7 +2,11 @@
 
 > Additional functionality for _ApiResource_[+axios-rest-api]
 
-_async_ **fill**(list, rules, [defaultRegexp]) - раскрыть на первом уровне в соответствии с правилом, или списком правил
+_async_ **fill**(list, rules, [defaultRegexp], [isPublic]) - раскрыть на первом уровне в соответствии с правилом, или списком правил
+
+_async_ **fillList**(object, rules, [defaultRegexp])
+
+_async_ **fillItem**(object, rules, [defaultRegexp], [isPublic])
 
 ```js
 # Rules (array)

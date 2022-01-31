@@ -126,7 +126,7 @@ export default class PreloadApi {
   }
 
   // Раскрытие в соотвествии с правилами. Список правил
-  async filling(object, rules, defaultRegexp, isPublic) {
+  async fillItem(object, rules, defaultRegexp, isPublic) {
     // if (isArray(object) && !isEmpty(object)) {
     //   return Promise.all(
     //     map(object, (value) => {
@@ -148,11 +148,21 @@ export default class PreloadApi {
   }
 
   // Раскрытие списка
-  async fill(list, rules, defaultRegexp) {
+  async fillList(list, rules, defaultRegexp) {
     return Promise.all(
       map(list, (object, index) => {
-        return this.filling(object, rules, defaultRegexp, this.isPublic);
+        return this.fillItem(object, rules, defaultRegexp, this.isPublic);
       }),
     );
+  }
+
+  // Раскрытие списка или объекта
+  async fill(list, rules, defaultRegexp, isPublic) {
+    if (isArray(list)) {
+      return await fillList(list, rules, defaultRegexp); 
+    }
+    if (isObject(list)) {
+      return await this.fillItem(list, rules, defaultRegexp, isPublic || this.isPublic);
+    }
   }
 }
