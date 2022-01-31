@@ -122,7 +122,7 @@ export default class PreloadApi {
     if (object[field]) {
       object[field] = await this.relation(target, regexp, isPublic);
     }
-    return;
+    return object;
   }
 
   // Раскрытие в соотвествии с правилами. Список правил
@@ -134,16 +134,17 @@ export default class PreloadApi {
     //     }),
     //   );
     // }
-    return Promise.all(
+    await Promise.all(
       map(rules, (rule) => {
         if (isString(rule)){
-          return this.expand(object, rule, defaultRegexp);
+          object = this.expand(object, rule, defaultRegexp);
         }
         if (isArray(rule) && !isEmpty(rule)) {
-          return this.expand(object, rule[0], rule[1] || defaultRegexp);
+          object = this.expand(object, rule[0], rule[1] || defaultRegexp);
         }
       }),
     );
+    return object;
   }
 
   // Раскрытие списка
